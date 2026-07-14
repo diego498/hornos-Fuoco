@@ -522,17 +522,30 @@
     @media (max-width: 768px) {
       .hero-inner { grid-template-columns: 1fr; gap: 24px; }
       .hero-card-wrap { display: none; }
-      .hero { min-height: auto; padding: 80px 0 140px; }
+      .hero { min-height: auto; padding: 80px 0 48px; }
+      .hero-stats { position: relative; }
+      .hero-stats-inner {
+        display: flex; flex-wrap: nowrap; overflow-x: auto;
+        gap: 0; padding: 0; justify-content: flex-start;
+        scrollbar-width: none;
+      }
+      .hero-stats-inner::-webkit-scrollbar { display: none; }
+      .hero-stats-inner .stat-item {
+        min-width: 130px; flex-shrink: 0;
+        padding: 16px 20px;
+        border-right: 1px solid rgba(255,255,255,.1);
+        border-bottom: none;
+      }
+      .hero-stats-inner .stat-item:last-child { border-right: none; }
+      .stat-num { font-size: 28px; }
+      .stat-label { font-size: 10px; }
       .testi-grid { grid-template-columns: 1fr; }
       .hero-title { font-size: clamp(40px, 11vw, 64px); }
       .hero-subtitle { font-size: 15px; }
       .categories-grid { grid-template-columns: 1fr; gap: 16px; }
       .cat-card-img { aspect-ratio: 16/9; }
       .how-grid[style*="rtl"] { direction: ltr; }
-      .testi-grid { grid-template-columns: 1fr; }
       .italy-header { margin-bottom: 40px; }
-      .hero-stats-inner { gap: 20px; flex-wrap: wrap; justify-content: center; }
-      .stat-num { font-size: 30px; }
     }
     @media (max-width: 640px) {
       .topbar { font-size: 11px; gap: 12px; }
@@ -544,21 +557,6 @@
       .products-grid { grid-template-columns: 1fr; }
       .why-grid { grid-template-columns: 1fr; }
       .hero-inner { padding: 0 20px; }
-      .hero-stats-inner {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0; padding: 0;
-      }
-      .hero-stats-inner .stat-item {
-        padding: 18px 12px;
-        border-right: 1px solid rgba(255,255,255,.1);
-        border-bottom: 1px solid rgba(255,255,255,.1);
-      }
-      .hero-stats-inner .stat-item:nth-child(2n) { border-right: none; }
-      .hero-stats-inner .stat-item:last-child { grid-column: span 2; border-bottom: none; }
-      .hero-stats-inner .stat-item:nth-child(3), .hero-stats-inner .stat-item:nth-child(4) { border-bottom: none; }
-      .stat-num { font-size: 28px; }
-      .stat-label { font-size: 10px; }
       .cta-section { padding: 56px 20px; }
       .cta-section::before { font-size: 120px; }
       .site-footer { padding: 48px 20px 32px; }
