@@ -544,8 +544,21 @@
       .products-grid { grid-template-columns: 1fr; }
       .why-grid { grid-template-columns: 1fr; }
       .hero-inner { padding: 0 20px; }
-      .hero-stats-inner { padding: 16px 20px; gap: 16px; }
-      .hero-stats-inner .stat-item { min-width: calc(33% - 12px); }
+      .hero-stats-inner {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0; padding: 0;
+      }
+      .hero-stats-inner .stat-item {
+        padding: 18px 12px;
+        border-right: 1px solid rgba(255,255,255,.1);
+        border-bottom: 1px solid rgba(255,255,255,.1);
+      }
+      .hero-stats-inner .stat-item:nth-child(2n) { border-right: none; }
+      .hero-stats-inner .stat-item:last-child { grid-column: span 2; border-bottom: none; }
+      .hero-stats-inner .stat-item:nth-child(3), .hero-stats-inner .stat-item:nth-child(4) { border-bottom: none; }
+      .stat-num { font-size: 28px; }
+      .stat-label { font-size: 10px; }
       .cta-section { padding: 56px 20px; }
       .cta-section::before { font-size: 120px; }
       .site-footer { padding: 48px 20px 32px; }
