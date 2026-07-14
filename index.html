@@ -516,28 +516,48 @@
       .how-img-wrap { max-width: 480px; margin: 0 auto; }
       .products-grid { grid-template-columns: repeat(2, 1fr); }
       .footer-grid { grid-template-columns: 1fr 1fr; }
+      .italy-grid { grid-template-columns: repeat(2, 1fr); }
+      .italy-card { border-bottom: 1px solid rgba(255,255,255,.08); }
     }
     @media (max-width: 768px) {
-      .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+      .hero-inner { grid-template-columns: 1fr; gap: 24px; }
       .hero-card-wrap { display: none; }
-      .hero { min-height: 80vh; }
+      .hero { min-height: auto; padding: 80px 0 140px; }
       .testi-grid { grid-template-columns: 1fr; }
-      .hero-title { font-size: clamp(56px, 14vw, 80px); }
+      .hero-title { font-size: clamp(40px, 11vw, 64px); }
+      .hero-subtitle { font-size: 15px; }
+      .categories-grid { grid-template-columns: 1fr; gap: 16px; }
+      .cat-card-img { aspect-ratio: 16/9; }
+      .how-grid[style*="rtl"] { direction: ltr; }
+      .testi-grid { grid-template-columns: 1fr; }
+      .italy-header { margin-bottom: 40px; }
+      .hero-stats-inner { gap: 20px; flex-wrap: wrap; justify-content: center; }
+      .stat-num { font-size: 30px; }
     }
     @media (max-width: 640px) {
-      .topbar { font-size: 11px; gap: 16px; }
+      .topbar { font-size: 11px; gap: 12px; }
+      .topbar span:last-child { display: none; }
       .header-inner { padding: 0 20px; }
       .main-nav { display: none; }
       .mobile-menu-btn { display: flex; margin-left: auto; }
-      .section-wrap { padding: 0 20px; }
+      .section-wrap { padding: 0 16px; }
       .products-grid { grid-template-columns: 1fr; }
       .why-grid { grid-template-columns: 1fr; }
       .hero-inner { padding: 0 20px; }
-      .hero-stats-inner { padding: 20px; gap: 24px; }
-      .cta-section { padding: 64px 20px; }
+      .hero-stats-inner { padding: 16px 20px; gap: 16px; }
+      .hero-stats-inner .stat-item { min-width: calc(33% - 12px); }
+      .cta-section { padding: 56px 20px; }
+      .cta-section::before { font-size: 120px; }
       .site-footer { padding: 48px 20px 32px; }
       .footer-grid { grid-template-columns: 1fr; }
       .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+      .italy-grid { grid-template-columns: 1fr; }
+      .accessories-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero-actions { flex-direction: column; }
+      .btn-hero-primary, .btn-hero-secondary { width: 100%; text-align: center; }
+      .how-section { padding: 64px 0; }
+      .italy-section { padding: 64px 0; }
+      .products-section, .accessories-section, .why-section, .testi-section { padding: 64px 0; }
     }
   </style>
 </head>
